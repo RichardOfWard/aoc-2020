@@ -2,7 +2,8 @@ import java.io.ByteArrayInputStream
 import kotlin.test.assertEquals
 
 abstract class AocTest {
-    protected abstract val day: Day00
+    protected abstract val day: Day
+
     protected fun testSample(sample: Array<String>, part1Solution: String) {
         assertEquals(part1Solution, day.part1(makeInput(sample)))
     }
