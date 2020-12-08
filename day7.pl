@@ -15,9 +15,11 @@ foreach my $line (@lines) {
 		my @subparts = split /, /, $parts[1];
 		my %contents = ();
 		foreach my $subpart (@subparts) {
+			my $num = $subpart;
+			$num =~ s/\D//g;
 			$subpart =~ s/ bags?[.]?//;
 			$subpart =~ s/[0-9]+ //;
-			@contents{$subpart} = 1;
+			@contents{$subpart} = $num;
 		}
 		$rules{$parts[0]} = \%contents;
 	}
@@ -41,3 +43,19 @@ do {
 } while ($foundSize < $newFoundSize);
 
 print "$newFoundSize\n";
+
+sub countBag {
+	my $colName = $_[0];
+	unless (exists($rules{$colName})) {
+		return 0;
+	}
+	my %rule = %{$rules{$colName}};
+	my $total = 0;
+	foreach my $subColName (keys %rule) {
+		$total += $rule{$subColName} * (countBag($subColName) + 1);
+	}
+	return $total;
+}
+
+print countBag("shiny gold");
+print "\n";
