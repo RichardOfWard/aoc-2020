@@ -13,9 +13,14 @@ unsigned long long int part1(std::vector<Num> &nums);
 
 std::vector<Num> readNums();
 
+unsigned long long int part2(const std::vector<Num> &nums, unsigned long long int part1Solution);
+
 int main() {
     std::vector<Num> nums = readNums();
-    std::cout << part1(nums) << std::endl;
+    auto part1Solution = part1(nums);
+    std::cout << part1Solution << std::endl;
+    auto part2Solution = part2(nums, part1Solution);
+    std::cout << part2Solution << std::endl;
 }
 
 std::vector<Num> readNums() {
@@ -69,6 +74,24 @@ Num part1(std::vector<Num> &nums) {
     for (auto &n: nums) {
         if (!xmasRing.push(n)) {
             return n;
+        }
+    }
+    throw std::runtime_error("no solution found!");
+}
+
+unsigned long long int part2(const std::vector<Num> &nums, unsigned long long int part1Solution) {
+    for (size_t i = 0; i < nums.size(); ++i) {
+        Num sum = 0;
+        for (size_t j = 0; i < nums.size() - i && sum < part1Solution; j++) {
+            sum += nums[i + j];
+            if (sum == part1Solution) {
+                Num min = INT64_MAX, max = 0;
+                for (size_t k = 0; k <= j; k++) {
+                    min = std::min(min, nums[i + k]);
+                    max = std::max(max, nums[i + k]);
+                }
+                return min+max;
+            }
         }
     }
     throw std::runtime_error("no solution found!");
