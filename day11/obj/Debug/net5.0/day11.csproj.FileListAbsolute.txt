@@ -1,0 +1,16 @@
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/day11
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/day11.deps.json
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/day11.runtimeconfig.json
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/day11.runtimeconfig.dev.json
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/day11.dll
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/ref/day11.dll
+/home/richard/code/aoc-2020/day11/bin/Debug/net5.0/day11.pdb
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.csprojAssemblyReference.cache
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.GeneratedMSBuildEditorConfig.editorconfig
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.AssemblyInfoInputs.cache
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.AssemblyInfo.cs
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.csproj.CoreCompileInputs.cache
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.dll
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/ref/day11.dll
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.pdb
+/home/richard/code/aoc-2020/day11/obj/Debug/net5.0/day11.genruntimeconfig.cache
